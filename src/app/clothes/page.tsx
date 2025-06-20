@@ -1,14 +1,12 @@
 'use client'
 import { clothes } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
-import { useState } from 'react';
-import { ChevronRight } from 'lucide-react';
-import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebookF } from 'react-icons/fa';
+
+
 import Footer from '@/components/Footer';
 
 export default function ClothesPage() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-      const [formStatus, setFormStatus] = useState("idle");
+
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-[#f8fafb]" style={{fontFamily: '"Work Sans", "Noto Sans", sans-serif'}}>
       <div className="layout-container flex h-full grow flex-col">

@@ -1,17 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+
 import { allProducts } from '../data/products';
-import ProductCard from '../components/ProductCard';
-import { FaFacebookF, FaInstagram, FaPhoneAlt, FaEnvelope, FaTwitter } from 'react-icons/fa';
-import { ChevronRight } from 'lucide-react';
+
 import Footer from '../components/Footer';
 
 export default function Home() {
   const featuredProducts = allProducts.slice(0, 3);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formStatus, setFormStatus] = useState("idle");
+  
 
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-[#f8fafb]" style={{ fontFamily: '"Work Sans", "Noto Sans", sans-serif' }}>
@@ -34,7 +31,7 @@ export default function Home() {
                       Get the best of both worlds
                     </h1>
                     <h2 className="text-white text-sm @[480px]:text-base">
-                      From cutting-edge gadgets to cozy fall threads, we've got you covered. Explore our lineup of hand-picked faves.
+                      From cutting-edge gadgets to cozy fall threads, weve got you covered. Explore our lineup of hand-picked faves.
                     </h2>
                   </div>
                   <Link href="/gadgets" className="flex h-10 px-4 items-center justify-center rounded-xl bg-[#1f89e0] text-white text-sm font-bold hover:bg-[#1a7bc8] transition-colors">

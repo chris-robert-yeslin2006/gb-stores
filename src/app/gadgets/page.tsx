@@ -1,15 +1,12 @@
 'use client'
 import { gadgets } from '@/data/products';
 import ProductCard from '@/components/ProductCard';
-import { ChevronRight } from 'lucide-react';
-import { useState } from 'react';
-import { FaEnvelope, FaFacebookF, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
+
 import Footer from '@/components/Footer';
 
 
 export default function GadgetsPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-    const [formStatus, setFormStatus] = useState("idle");
+  
   return (
     <div className="relative flex size-full min-h-screen flex-col bg-[#f8fafb]" style={{fontFamily: '"Work Sans", "Noto Sans", sans-serif'}}>
       <div className="layout-container flex h-full grow flex-col">

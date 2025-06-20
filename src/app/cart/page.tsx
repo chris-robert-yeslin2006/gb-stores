@@ -4,14 +4,15 @@ import { useCart } from '../../hooks/useCart';
 import { useState } from 'react';
 import CartModal from '../../components/CartModal';
 import Link from 'next/link';
-import { ChevronRight } from 'lucide-react';
-import { FaEnvelope, FaPhoneAlt, FaInstagram, FaFacebookF } from 'react-icons/fa';
+import Image from 'next/image';
+
+
 import Footer from '@/components/Footer';
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, totalPrice } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formStatus, setFormStatus] = useState("idle");
+ 
   
 
   return (
@@ -53,7 +54,7 @@ export default function CartPage() {
                     Your cart is empty
                   </h3>
                   <p className="text-[#507695] text-sm sm:text-base font-normal leading-normal mb-8">
-                    Looks like you haven't added anything to your cart yet
+                    Looks like you havent added anything to your cart yet
                   </p>
                   <Link 
                     href="/" 
@@ -77,7 +78,7 @@ export default function CartPage() {
                 {/* Cart Items */}
                 <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-[#e7eef4]/50 overflow-hidden">
                   <div className="p-4 sm:p-6 space-y-4">
-                    {cart.map((item, index) => (
+                    {cart.map((item) => (
                       <div
   key={item.id}
   className="group bg-gradient-to-r from-[#f8fafb] to-[#f0f6fa] border border-[#e7eef4]/70 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 hover:border-[#1f89e0]/20"
@@ -86,7 +87,9 @@ export default function CartPage() {
     <div className="flex items-start gap-4 sm:gap-6">
       {/* Zoomable Product Image */}
       <div className="relative group w-24 h-24 sm:w-32 sm:h-32 overflow-hidden rounded-xl border border-[#e7eef4] shadow-sm flex-shrink-0">
-        <img
+        <Image
+          width={128}
+          height={128}
           src={item.image}
           alt={item.name}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-125"

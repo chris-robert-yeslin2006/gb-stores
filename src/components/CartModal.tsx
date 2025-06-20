@@ -4,7 +4,7 @@ import { useCart } from '../hooks/useCart';
 import { useState } from 'react';
 
 export default function CartModal({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) {
-  const { cart, removeFromCart, updateQuantity, clearCart, totalPrice } = useCart();
+  const { cart, clearCart, totalPrice } = useCart();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState('');
 
@@ -22,7 +22,7 @@ export default function CartModal({ isOpen, onClose }: { isOpen: boolean, onClos
         "https://script.google.com/macros/s/AKfycbyVIccqwhe-S5Gs5YAM3L6cBYgF6paB5AO0UgD_yTA5KuwcUKPU4mpFH0Ha9i0ZnnnrWA/exec",
         {
           method: "POST",
-          body: new URLSearchParams(formData as any),
+          body: new URLSearchParams(Array.from(formData.entries()) as string[][]),
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
