@@ -1,5 +1,5 @@
 
-# 🛒 My Shopping Site
+# 🛒 GB stores
 
 ![Shopping Cats](https://media.tenor.com/uneqmK1ERo8AAAAi/tkthao219-bubududu.gif)
 
@@ -42,38 +42,12 @@ A cute and simple shopping website built with **Next.js** and **Tailwind CSS**, 
 
 ---
 
-## 🛠️ Setup Instructions
 
-1. **Clone the Repo**
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run Locally**
-   ```bash
-   npm run dev
-   ```
-
-4. **Access the App**
-   ```
-   http://localhost:3000
-   ```
-
----
 
 ## ✨ Google Apps Script Integration
 
 - Orders submitted from the modal form are sent to a Google Form (via Apps Script) using a `POST` request.
-- The Google Script URL used should match your own script:
-  ```js
-  https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
-  ```
+
 
 ---
 
@@ -101,6 +75,6 @@ You can include screenshots or your own animated demo here!
 
 ## 📄 License
 
-This project is for educational and fun purposes. Feel free to fork and modify!
+This project is for internzo private limited 
 
 ---
